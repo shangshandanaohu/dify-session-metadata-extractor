@@ -1,0 +1,26 @@
+identity:
+  name: "session-metadata-extractor"
+  author: "sangfor"
+  label:
+    en_US: "Session Metadata Extractor"
+    zh_Hans: "会话元数据提取器"
+    pt_BR: "Extrator de Metadados de Sessão"
+    ja_JP: "セッションメタデータ抽出器"
+description:
+  human:
+    en_US: "Reads Dify runtime session metadata (app ID, session ID, user ID, device fingerprint) and outputs it as structured XML."
+    zh_Hans: "读取 Dify 运行时的会话元数据（App ID、Session ID、User ID、设备指纹），以结构化 XML 格式输出。"
+    pt_BR: "Lê os metadados de sessão do runtime do Dify (app ID, session ID, user ID, impressão digital do dispositivo) e os retorna em XML estruturado."
+    ja_JP: "Dify ランタイムのセッションメタデータ（アプリ ID、セッション ID、ユーザー ID、デバイス識別子）を読み取り、構造化された XML として出力します。"
+  llm: "Returns the current Dify runtime session metadata (version, machine ID, app ID, session ID, user ID) as structured XML."
+parameters: []
+output_schema:
+  type: object
+  properties:
+    text:
+      type: string
+      description: Structured XML containing session metadata
+output_type: text
+extra:
+  python:
+    source: tools/session-metadata-extractor.py
